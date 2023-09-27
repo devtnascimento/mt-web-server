@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang=en>
+
+<head>
+    <meta charset=UTF-8>
+    <meta content="width=device-width,initial-scale=1.0" name=viewport>
+    <title>Inside look at modern web browser (part 3) - Chrome Developers</title>
+    <link href="apple-touch-icon.png" sizes=180x180 rel=apple-touch-icon>
+    <link href="favicon-32x32.png" sizes=32x32 type=image/png rel=icon>
+    <link href="all.xml" type=application/rss+xml rel=alternate title="Chrome Developers">
+    <script src="analytics.js" async></script>
+</head>
+
+<body>
+    <div class=scaffold>
+
+        <h3 id=subresource-loading tabindex=-1><a class=heading-link href=#subresource-loading aria-hidden=true>#</a>
+            Subresource loading</h3>
+        <p>A website usually uses external resources like images, CSS, and JavaScript. Those files
+            need to be loaded from network or cache. The main thread <em>could</em> request them one
+            by one as they find them while parsing to build a DOM, but in order to speed up,
+            "preload scanner" is run concurrently. If there are things like <code>&lt;img></code> or
+            <code>&lt;link></code> in the HTML document, preload scanner peeks at tokens generated
+            by HTML parser and sends requests to the network thread in the browser process.
+        </p>
+        <figure><img width=800 height=421 src="qmuN5aduuEit6SZfwVOi.png"
+                sizes="(min-width:800px) 800px,calc(100vw - 48px)" loading=lazy decoding=async alt=DOM />
+            <figcaption>Figure 2: The main thread parsing HTML and building a DOM tree</figcaption>
+        </figure>
+    </div>
+</body>
+
+</html>

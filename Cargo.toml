@@ -1,0 +1,11 @@
+[package]
+name = "mt-web-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+async-std = "1.12.0"
+
+[[bin]]
+name = "mtws"
+path = "src/main.rs"
